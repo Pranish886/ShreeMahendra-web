@@ -28,25 +28,25 @@ const notices = [
 function NoticePage() {
   return (
     <main className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
-      <div className="mb-8 flex items-center justify-between">
+      <div className="mb-8 flex items-center justify-between rounded-2xl border border-blue-100 bg-white/80 p-6 shadow-sm backdrop-blur">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">Notice</p>
-          <h1 className="mt-1 text-3xl font-semibold text-slate-900">Latest Announcements</h1>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#1649B0]">Notice</p>
+          <h1 className="mt-1 text-3xl font-semibold text-[#0A1F44]">Latest Announcements</h1>
         </div>
-        <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700">
+        <span className="rounded-full bg-[#EAF2FF] px-3 py-1 text-sm font-medium text-[#1649B0]">
           {notices.length} updates
         </span>
       </div>
 
       <div className="space-y-4">
         {notices.map((notice) => (
-          <article key={notice.id} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <article key={notice.id} className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <span className="inline-flex rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-700">
+                <span className="inline-flex rounded-full bg-[#EAF2FF] px-2.5 py-1 text-xs font-semibold text-[#1649B0]">
                   {notice.category}
                 </span>
-                <h2 className="mt-2 text-xl font-semibold text-slate-900">{notice.title}</h2>
+                <h2 className="mt-2 text-xl font-semibold text-[#0A1F44]">{notice.title}</h2>
               </div>
               <span className="text-sm text-slate-500">{notice.date}</span>
             </div>

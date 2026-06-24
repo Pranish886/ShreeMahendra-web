@@ -28,26 +28,26 @@ const downloads = [
 function DownloadPage() {
   return (
     <main className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
-      <div className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">Download</p>
-        <h1 className="mt-1 text-3xl font-semibold text-slate-900">Important Documents</h1>
+      <div className="mb-8 rounded-2xl border border-blue-100 bg-white/80 p-6 shadow-sm backdrop-blur">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#1649B0]">Download</p>
+        <h1 className="mt-1 text-3xl font-semibold text-[#0A1F44]">Important Documents</h1>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
         {downloads.map((item) => (
-          <div key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div key={item.title} className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h2 className="text-lg font-semibold text-slate-900">{item.title}</h2>
+                <h2 className="text-lg font-semibold text-[#0A1F44]">{item.title}</h2>
                 <p className="mt-1 text-sm text-slate-600">{item.description}</p>
               </div>
-              <span className="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">
+              <span className="rounded-full bg-[#EAF2FF] px-2.5 py-1 text-xs font-semibold text-[#1649B0]">
                 {item.type}
               </span>
             </div>
             <div className="mt-5 flex items-center justify-between">
               <span className="text-sm text-slate-500">{item.size}</span>
-              <button className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700">
+              <button className="rounded-lg bg-gradient-to-r from-[#1649B0] to-[#2B6FE8] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90">
                 Download
               </button>
             </div>
